@@ -12,11 +12,14 @@ pub struct Ticket {
 
 impl Ticket {
     pub fn title(&self) -> &str {
-        todo!()
+        // 去除开头和结尾空格
+        self.title.trim_end()
+            .trim_start()
     }
 
     pub fn description(&self) -> &str {
-        todo!()
+        self.description.trim_end()
+            .trim_start()
     }
 }
 
