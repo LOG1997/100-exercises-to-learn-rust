@@ -9,7 +9,15 @@ enum Shape {
 impl Shape {
     // TODO: Implement the `n_sides` method using a `match`.
     pub fn n_sides(&self) -> u8 {
-        todo!()
+        // NOTE:match匹配enum的值，输出不同的数字
+        match self {
+            Shape::Circle => 0,
+            Shape::Square => 4,
+            Shape::Rectangle => 4,
+            Shape::Triangle => 3,
+            Shape::Pentagon => 5,
+            _ => panic!("Invalid shape"),
+        }
     }
 }
 
